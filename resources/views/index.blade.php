@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Liste des Produits</title>
 </head>
 <body>
-    <h1>Bienvenue dans votre premier projet laravel affichage</h1>
+    <h1>Produits disponibles :</h1>
+
+    @if ($produits->isEmpty())
+        <p>Aucun produit disponible.</p>
+    @else
+        <ul>
+            @foreach ($produits as $produit)
+                <li>
+                    {{ $produit->nom }} - {{ $produit->prix }} €
+                </li>
+            @endforeach
+        </ul>
+    @endif
 </body>
 </html>
