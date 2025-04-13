@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Bienvenue dans votre premier projet laravel</h1>
+    <h1>Bienvenue dans votre premier projet laravel affichage</h1>
 </body>
 </html>
